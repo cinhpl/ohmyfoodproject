@@ -1,0 +1,35 @@
+/*   FOOTER   */
+.footer {
+    padding: 30px 30px 20px 30px;
+    background-color: rgb(63, 63, 63);
+    color: white;
+    margin: 0;
+    &__title {
+        font-family: Shrikhand, sans-serif;
+        font-weight: 300;
+        color: white;
+        margin: 0;
+    }
+    &__ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 10px;
+    }
+    &__links1 {
+        font-size: 14px;
+        padding: 4px;
+        font-weight: 500;
+    }
+    &__links2 {
+        padding: 4px;
+        font-size: 14px;
+    }
+    &__icon {
+        margin-right: 15px;
+    }
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}

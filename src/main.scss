@@ -1,3 +1,10 @@
-body {
-    background: green;
-}
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+@import "base";
+@import "homepage";
+@import "restaurants";
+@import "animations";
+@import "footer";
+@import "mixins";

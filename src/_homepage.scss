@@ -1,0 +1,157 @@
+@use "../src/mixins";
+
+/*   EXPLORATION    */
+nav {
+    .location {
+        background-color: #e7e7e7;
+        padding: 20px 20px 20px 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        color: #2e2e2e;
+        box-shadow: inset 1px 3px 9px -6px;
+        &__icon {
+            padding-right: 15px;
+            align-items: center;
+        }
+        &__position {
+            border: none;
+            background-color: #e7e7e7;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+
+    .explore {
+        background-color: #f3f3f3;
+        text-align: center;
+        padding: 30px 20px 50px 20px;
+        &__title {
+            margin: 0 0 10px 0;
+        }
+        &__subtiles {
+            margin-bottom: 40px;
+            color: #616161;
+        }
+        &__btn {
+            border-radius: 35px;
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            padding: 15px 20px 15px 20px;
+            background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+            transition : 0.2s ease-in-out;
+            @include mixins.box-shadow;
+            cursor: pointer;
+            }
+           }
+        }
+    
+
+    .choice {
+        padding: 15px 5px 5px 5px;
+        margin-right: 20px;
+        &__title {
+            padding-left: 20px;
+        }
+        &__counter {
+            @include mixins.counter;
+        }
+        &__steps {
+            padding: 0px 20px 20px 50px;
+        }
+        &__step {
+            list-style-type: none;
+            border-radius: 25px;
+            align-items: center;
+            margin: 0 0 20px 0;
+            width: 90%;
+            padding: 15px 15px 15px 30px;
+            display: flex;
+            flex-wrap: wrap;
+            font-weight: bold;
+            background-color: #F3F3F3;
+            @include mixins.box-shadow;
+                &:hover {
+                    background-color: #f0e9fa;
+                    cursor: pointer;
+                    @include mixins.transform;
+            }
+        }
+        &__icon {
+            color: #6b6b6b;
+            margin-right: 30px;
+            }
+        &__icon:hover {
+                color: #9356DC;
+            }
+        }
+    
+
+/*   RESTAURANTS   */
+    section {
+        margin: 0;
+        background-color: #F3F3F3;
+        padding: 20px;
+    }
+    .meals {
+        &__card {
+            width: 100%;
+            height: 280px;
+            border-radius: 25px;
+            margin-bottom: 35px;
+            background-color: white;
+            @include mixins.box-shadow;
+            position: relative;
+                &:hover {
+                @include mixins.transform;
+                }
+                &::before {
+                    @include mixins.heart;
+                    opacity: 1;
+                }
+                &::after {
+                    @include mixins.heart;
+                    font-weight: 900;
+                    background: linear-gradient(to top left, #9356DC, #FF79DA);
+                    opacity: 0;
+                    -webkit-background-clip:text;
+                    color:transparent;
+                    cursor: pointer;
+                }
+                &:hover::after {
+                    opacity: 1;
+                    transform: scale(1.1);
+                    transition-duration: 0.3s;
+                }
+        }
+        &__img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 25px 25px 0 0;
+            }
+        &__title {
+            padding: 10px 0 5px 15px;
+            margin: 0;
+        }
+        &__loc {
+            margin: 0;
+            padding-left: 15px;
+        }
+        &__infos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__new {
+            @include mixins.new;
+        }
+        
+        
+}
+    .meals a {
+        text-decoration: none;
+        color: black;
+    }

@@ -1,3 +1,234 @@
+body {
+  max-width: 767px;
+  font-family: "Roboto", "Shrikhand", sans-serif;
+  margin: 0;
+}
 
+h2 {
+  font-weight: 800;
+}
+
+/*   EXPLORATION    */
+nav .location {
+  background-color: #e7e7e7;
+  padding: 20px 20px 20px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #2e2e2e;
+  box-shadow: inset 1px 3px 9px -6px;
+}
+nav .location__icon {
+  padding-right: 15px;
+  align-items: center;
+}
+nav .location__position {
+  border: none;
+  background-color: #e7e7e7;
+  font-size: 16px;
+  font-weight: 600;
+}
+nav .explore {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 30px 20px 50px 20px;
+}
+nav .explore__title {
+  margin: 0 0 10px 0;
+}
+nav .explore__subtiles {
+  margin-bottom: 40px;
+  color: #616161;
+}
+nav .explore__btn {
+  border-radius: 35px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 15px 20px 15px 20px;
+  background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+  transition: 0.2s ease-in-out;
+  box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
+  cursor: pointer;
+}
+
+.choice {
+  padding: 15px 5px 5px 5px;
+  margin-right: 20px;
+}
+.choice__title {
+  padding-left: 20px;
+}
+.choice__counter {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  font-weight: 300;
+  margin: 0 30px 0 -45px;
+}
+.choice__steps {
+  padding: 0px 20px 20px 50px;
+}
+.choice__step {
+  list-style-type: none;
+  border-radius: 25px;
+  align-items: center;
+  margin: 0 0 20px 0;
+  width: 90%;
+  padding: 15px 15px 15px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+  background-color: #F3F3F3;
+  box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
+}
+.choice__step:hover {
+  background-color: #f0e9fa;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+.choice__icon {
+  color: #6b6b6b;
+  margin-right: 30px;
+}
+.choice__icon:hover {
+  color: #9356DC;
+}
+
+/*   RESTAURANTS   */
+section {
+  margin: 0;
+  background-color: #F3F3F3;
+  padding: 20px;
+}
+
+.meals__card {
+  width: 100%;
+  height: 280px;
+  border-radius: 25px;
+  margin-bottom: 35px;
+  background-color: white;
+  box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
+  position: relative;
+}
+.meals__card:hover {
+  transform: scale(1.02);
+}
+.meals__card::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  content: "\f004";
+  color: inherit;
+  position: absolute;
+  right: 25px;
+  bottom: 28px;
+  font-size: 28px;
+  opacity: 1;
+}
+.meals__card::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  content: "\f004";
+  color: inherit;
+  position: absolute;
+  right: 25px;
+  bottom: 28px;
+  font-size: 28px;
+  font-weight: 900;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  opacity: 0;
+  -webkit-background-clip: text;
+  color: transparent;
+  cursor: pointer;
+}
+.meals__card:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+.meals__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+.meals__title {
+  padding: 10px 0 5px 15px;
+  margin: 0;
+}
+.meals__loc {
+  margin: 0;
+  padding-left: 15px;
+}
+.meals__infos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.meals__new {
+  background-color: #99E2D0;
+  padding: 7px 15px 7px 15px;
+  border-radius: 3px;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #24a182;
+}
+
+.meals a {
+  text-decoration: none;
+  color: black;
+}
+
+/*   FOOTER   */
+.footer {
+  padding: 30px 30px 20px 30px;
+  background-color: rgb(63, 63, 63);
+  color: white;
+  margin: 0;
+}
+.footer__title {
+  font-family: Shrikhand, sans-serif;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+}
+.footer__ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+.footer__links1 {
+  font-size: 14px;
+  padding: 4px;
+  font-weight: 500;
+}
+.footer__links2 {
+  padding: 4px;
+  font-size: 14px;
+}
+.footer__icon {
+  margin-right: 15px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
 
 /*# sourceMappingURL=style.css.map */
