@@ -15,7 +15,7 @@ nav .location {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  color: #2e2e2e;
+  color: #2E2E2E;
   box-shadow: inset 1px 3px 9px -6px;
 }
 nav .location__icon {
@@ -41,6 +41,7 @@ nav .explore__subtiles {
   color: #616161;
 }
 nav .explore__btn {
+  box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
   border-radius: 35px;
   color: white;
   text-decoration: none;
@@ -49,18 +50,16 @@ nav .explore__btn {
   padding: 15px 20px 15px 20px;
   background-image: linear-gradient(to top left, #9356DC, #FF79DA);
   transition: 0.2s ease-in-out;
-  box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
   cursor: pointer;
 }
-
-.choice {
+nav .choice {
   padding: 15px 5px 5px 5px;
   margin-right: 20px;
 }
-.choice__title {
+nav .choice__title {
   padding-left: 20px;
 }
-.choice__counter {
+nav .choice__counter {
   background-color: #9356DC;
   color: white;
   border-radius: 50%;
@@ -70,10 +69,16 @@ nav .explore__btn {
   font-weight: 300;
   margin: 0 30px 0 -45px;
 }
-.choice__steps {
+nav .choice__icon {
+  margin-right: 15px;
+}
+nav .choice__icon:hover {
+  color: #9356DC;
+}
+nav .choice__steps {
   padding: 0px 20px 20px 50px;
 }
-.choice__step {
+nav .choice__step {
   list-style-type: none;
   border-radius: 25px;
   align-items: center;
@@ -86,21 +91,14 @@ nav .explore__btn {
   background-color: #F3F3F3;
   box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
 }
-.choice__step:hover {
+nav .choice__step:hover {
   background-color: #f0e9fa;
   cursor: pointer;
   transform: scale(1.02);
 }
-.choice__icon {
-  color: #6b6b6b;
-  margin-right: 30px;
-}
-.choice__icon:hover {
-  color: #9356DC;
-}
 
 /*   RESTAURANTS   */
-section {
+#meals {
   margin: 0;
   background-color: #F3F3F3;
   padding: 20px;
@@ -118,48 +116,6 @@ section {
 .meals__card:hover {
   transform: scale(1.02);
 }
-.meals__card::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 500;
-  content: "\f004";
-  color: inherit;
-  position: absolute;
-  right: 25px;
-  bottom: 28px;
-  font-size: 28px;
-  opacity: 1;
-}
-.meals__card::after {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 500;
-  content: "\f004";
-  color: inherit;
-  position: absolute;
-  right: 25px;
-  bottom: 28px;
-  font-size: 28px;
-  font-weight: 900;
-  background: linear-gradient(to top left, #9356DC, #FF79DA);
-  opacity: 0;
-  -webkit-background-clip: text;
-  color: transparent;
-  cursor: pointer;
-}
-.meals__card:hover::after {
-  opacity: 1;
-  transform: scale(1.1);
-  transition-duration: 0.3s;
-}
 .meals__img {
   width: 100%;
   height: 200px;
@@ -174,11 +130,6 @@ section {
   margin: 0;
   padding-left: 15px;
 }
-.meals__infos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 .meals__new {
   background-color: #99E2D0;
   padding: 7px 15px 7px 15px;
@@ -189,10 +140,146 @@ section {
   top: 10px;
   color: #24a182;
 }
+.meals__checkbox {
+  position: absolute;
+  right: 30px;
+  bottom: 25px;
+  cursor: pointer;
+  font-size: 28px;
+}
+.meals__checkbox input {
+  opacity: 0;
+}
+
+input[type=checkbox] + span:before {
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  color: inherit;
+  font-size: 28px;
+}
+
+input[type=checkbox]:checked + span:before {
+  content: "\f004";
+  font-family: fontAwesome;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .meals a {
   text-decoration: none;
   color: black;
+}
+
+.header {
+  position: relative;
+}
+.header__nav {
+  margin: 15px;
+  text-align: center;
+  width: 90%;
+}
+.header__icon {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  text-decoration: none;
+  color: #2E2E2E;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.list__img {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+}
+.list__choices {
+  padding: 20px;
+  border-radius: 50px 50px 0 0;
+  background-color: #E7E7E7;
+  margin: -80px 0 0 0;
+  z-index: 10;
+  position: relative;
+}
+.list__title {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+}
+.list__checkbox {
+  position: absolute;
+  right: 40px;
+  top: 50px;
+  cursor: pointer;
+  font-size: 28px;
+}
+.list__checkbox input {
+  opacity: 0;
+}
+.list__h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  color: #525252;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 5px;
+  width: 40px;
+}
+.list__dishes {
+  padding-top: 20px;
+}
+.list__desserts {
+  padding: 20px 0 0 0;
+}
+.list__meals {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
+  margin-bottom: 10px;
+  padding: 10px 0 10px 10px;
+}
+.list__subtiles {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list__name {
+  font-weight: bold;
+  margin: 0;
+}
+.list__details {
+  margin: 0;
+  padding-top: 5px;
+}
+.list__meals a {
+  text-decoration: none;
+  color: black;
+}
+.list__btn {
+  justify-content: center;
+  display: flex;
+  margin: 40px 0 60px 0;
+}
+.list__commandbtn {
+  border-radius: 35px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 15px 20px 15px 20px;
+  background-image: linear-gradient(to top left, #9356DC, #FF79DA);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  padding: 15px 50px 15px 50px;
 }
 
 /*   FOOTER   */

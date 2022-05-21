@@ -1,0 +1,101 @@
+@use "../src/mixins";
+
+.header {
+    position: relative;
+    &__nav {
+        margin: 15px;
+        text-align: center;
+        width: 90%;
+    }
+    &__icon {
+        position: absolute;
+        left: 50px;
+        top: 10px;
+        text-decoration: none;
+        color: $greytext-color;
+        font-size: 20px;
+        font-weight: 900;      
+    }
+}
+
+.list {
+    &__img {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: relative;
+    }
+    &__choices {
+        padding: 20px;
+        border-radius: 50px 50px 0 0;
+        background-color: $primary-background-color;
+        margin: -80px 0 0 0;
+        z-index: 10;
+        position: relative;
+    }
+    &__title {
+        font-family: "Shrikhand", sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+    }
+    &__checkbox {
+        position: absolute;
+        right: 40px;
+        top: 50px;
+        cursor: pointer;
+        font-size: 28px;
+    }
+    &__checkbox input {   
+        opacity: 0;
+    }
+    &__h3 {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+        color: $greytitle-color;
+        border-bottom: 3px solid $tertiary-color;
+        padding-bottom: 5px;
+        width: 40px;
+    }
+    &__dishes {
+        padding-top: 20px;
+    }
+    &__desserts {
+        padding: 20px 0 0 0;
+    }
+    &__meals {
+        background-color: white;
+        border-radius: 20px;
+        @include mixins.box-shadow;
+        margin-bottom: 10px;
+        padding: 10px 0 10px 10px;
+    }
+    &__subtiles {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__name {
+        font-weight: bold;
+        margin: 0;
+    }
+    &__details {
+        margin: 0;
+        padding-top: 5px;
+    }
+    
+    &__meals a {
+        text-decoration: none;
+        color: black;
+    }
+    &__btn {
+        justify-content: center;
+        display: flex;
+        margin: 40px 0 60px 0;
+    }
+    &__commandbtn {
+        @include mixins.btn;
+        border: none;
+        padding: 15px 50px 15px 50px;
+    }
+}
+

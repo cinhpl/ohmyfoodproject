@@ -8,7 +8,7 @@ nav {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        color: #2e2e2e;
+        color: $greytext-color;
         box-shadow: inset 1px 3px 9px -6px;
         &__icon {
             padding-right: 15px;
@@ -34,21 +34,11 @@ nav {
             color: #616161;
         }
         &__btn {
-            border-radius: 35px;
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 400;
-            padding: 15px 20px 15px 20px;
-            background-image: linear-gradient(to top left, #9356DC, #FF79DA);
-            transition : 0.2s ease-in-out;
             @include mixins.box-shadow;
-            cursor: pointer;
+            @include mixins.btn;
             }
-           }
-        }
-    
-
+           }  
+                     
     .choice {
         padding: 15px 5px 5px 5px;
         margin-right: 20px;
@@ -57,6 +47,12 @@ nav {
         }
         &__counter {
             @include mixins.counter;
+        }
+        &__icon {
+            margin-right: 15px;
+            &:hover {
+                color: $primary-color;
+            }
         }
         &__steps {
             padding: 0px 20px 20px 50px;
@@ -78,19 +74,13 @@ nav {
                     cursor: pointer;
                     @include mixins.transform;
             }
+        
         }
-        &__icon {
-            color: #6b6b6b;
-            margin-right: 30px;
-            }
-        &__icon:hover {
-                color: #9356DC;
-            }
-        }
+    }
+    }
     
-
 /*   RESTAURANTS   */
-    section {
+    #meals {
         margin: 0;
         background-color: #F3F3F3;
         padding: 20px;
@@ -104,28 +94,10 @@ nav {
             background-color: white;
             @include mixins.box-shadow;
             position: relative;
-                &:hover {
+            &:hover {
                 @include mixins.transform;
-                }
-                &::before {
-                    @include mixins.heart;
-                    opacity: 1;
-                }
-                &::after {
-                    @include mixins.heart;
-                    font-weight: 900;
-                    background: linear-gradient(to top left, #9356DC, #FF79DA);
-                    opacity: 0;
-                    -webkit-background-clip:text;
-                    color:transparent;
-                    cursor: pointer;
-                }
-                &:hover::after {
-                    opacity: 1;
-                    transform: scale(1.1);
-                    transition-duration: 0.3s;
-                }
-        }
+            }
+        }  
         &__img {
             width: 100%;
             height: 200px;
@@ -140,17 +112,43 @@ nav {
             margin: 0;
             padding-left: 15px;
         }
-        &__infos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
         &__new {
             @include mixins.new;
+        }       
+        &__checkbox {
+            position: absolute;
+            right: 30px;
+            bottom: 25px;
+            cursor: pointer;
+            font-size: 28px;
         }
-        
-        
-}
+        &__checkbox input {   
+            opacity: 0;
+        }
+    }
+   
+    input[type="checkbox"] + span:before {
+        content: "\f004";
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 500;
+        color: inherit;
+        font-size: 28px;
+    }
+
+    input[type="checkbox"]:checked + span:before {
+        content: '\f004';
+        font-family: fontAwesome;
+        background: linear-gradient(to top left,$primary-color, $secondary-color);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+   
     .meals a {
         text-decoration: none;
         color: black;
