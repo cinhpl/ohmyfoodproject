@@ -1,9 +1,15 @@
 @use "../src/mixins";
 
+/*   HEADER   */
+.header__homepage {
+    text-align: center;
+    margin: 15px;
+}
+
 /*   EXPLORATION    */
 nav {
     .location {
-        background-color: #e7e7e7;
+        background-color: $background-nav-color;
         padding: 20px 20px 20px 100px;
         display: flex;
         flex-wrap: wrap;
@@ -16,14 +22,15 @@ nav {
         }
         &__position {
             border: none;
-            background-color: #e7e7e7;
+            background-color: $background-nav-color;
             font-size: 16px;
             font-weight: 600;
         }
+        
     }
 
     .explore {
-        background-color: #f3f3f3;
+        background-color: $primary-background-color;
         text-align: center;
         padding: 30px 20px 50px 20px;
         &__title {
@@ -50,9 +57,7 @@ nav {
         }
         &__icon {
             margin-right: 15px;
-            &:hover {
-                color: $primary-color;
-            }
+
         }
         &__steps {
             padding: 0px 20px 20px 50px;
@@ -67,22 +72,25 @@ nav {
             display: flex;
             flex-wrap: wrap;
             font-weight: bold;
-            background-color: #F3F3F3;
+            background-color: $primary-background-color;
             @include mixins.box-shadow;
                 &:hover {
                     background-color: #f0e9fa;
                     cursor: pointer;
-                    @include mixins.transform;
+                    @include mixins.transform;              
             }
         
         }
     }
+    .choice__step:hover .choice__icon {
+        color: $primary-color;
+    }
     }
     
 /*   RESTAURANTS   */
-    #meals {
+        #meals {
         margin: 0;
-        background-color: #F3F3F3;
+        background-color: $primary-background-color;
         padding: 20px;
     }
     .meals {

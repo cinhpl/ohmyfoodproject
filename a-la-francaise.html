@@ -12,102 +12,159 @@
     </style>
 </head>
 <!--HEADER-->
-    <header class="header">
-        <div class="header__nav">
-        <a href="index.html"><i class="fa-solid fa-arrow-left header__icon"></i></i></a>
-        <img src="images/ohmyfood@2x.svg" class="header__logo">
-        </div>
-    </header>
+<header class="header">
+    <div class="header__nav">
+    <a href="index.html"><i class="fa-solid fa-arrow-left header__icon" aria-hidden="true"></i></a>
+    <img src="images/ohmyfood@2x.svg" alt ="logo" class="header__logo">
+    </div>
+</header>
 <!--MENU-->
-    <body>
-        <section class="list">
-        <img src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="list__img">
-        <div class="list__choices">
+<body>
+    <section class="list">
+    <img src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo" class="list__img">
+    <div class="list__choices">
         <h2 class="list__title">À la française</h2>
-        <label class="list__checkbox">
-            <input type="checkbox">
-            <span></span>
-        </label>
-        <div class="list__starters">
+        <label class="list__checkbox"><input type="checkbox"><span></span></label>
+        <!--STARTERS-->
+        <div class="list__category">
             <h3 class="list__h3">Entrées</h3>
+            <div class="list__meals-category">
             <div class="list__meals">
-            <a href="#">
-                <h4 class="list__name">Tartare de poulpe acidulé</h4>
-               <div class="list__subtiles">
-                <p>Aux zests d'orange</p>
-                <strong class="list__price">25€</strong>
+                <div class="list__subtiles">
+                    <h4 class="list__name">Tartare de poulpe acidulé</h4>
+                    <div class="list__infos">
+                        <p class="list__details">Aux zests d'orange</p>
+                        <strong class="list__price">25€</strong>
+                    </div>
                 </div>
-            </a>
+                <div class="list__check">
+                    <i class="fa-solid fa-circle-check list__icon" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="list__meals">
-            <a href="#">
-                <p class="list__name">Velouté de légumes d'antan</p>
-                <p class="list__details">Carotte, panais, topinambour<strong>35€</strong></p>
-            </a>
+                <div class="list__subtiles">
+                    <h4 class="list__name">Velouté de légumes d'antan</h4>
+                    <div class="list__infos">
+                        <p class="list__details">Carotte, panais, topinambour</p>
+                        <strong class="list__price">35€</strong>
+                    </div>
+                </div>
+                <div class="list__check">
+                    <i class="fa-solid fa-circle-check list__icon" aria-hidden="true"></i>
+                </div>  
             </div>
             <div class="list__meals">
-            <a href="#">
-                <p class="list__name">Soupe à l'oignon</p>
-                <p class="list__details">Revisitée<strong>20€</strong></p>
-            </a>
+                <div class="list__subtiles">
+                    <h4 class="list__name">Soupe à l'oignon</h4>
+                    <div class="list__infos">
+                        <p class="list__details">Revisitée</p>
+                        <strong class="list__price">20€</strong>
+                    </div>
+                </div>
+                <div class="list__check">
+                    <i class="fa-solid fa-circle-check list__icon" aria-hidden="true"></i>
+                </div>
+            </div>
             </div>
         </div>
-        <div class="list__dishes">
-            <h3 class="list__h3">Plats</h3>
+        <!--DISHS-->
+        <div class="list__category">
+        <h3 class="list__h3">Plats</h3>
+        <div class="list__meals-category">
             <div class="list__meals">
-            <a href="#">
-                <p class="list__name">Coquilles Saint-Jacques</p>
-                <p class="list__details">Accompagnées d'une purée de panais<strong>40€</strong></p>
-            </a>
+                <div class="list__subtiles">
+                    <h4 class="list__name">Coquilles Saint-Jacques</h4>
+                    <div class="list__infos">
+                        <p class="list__details">Accompagnées d'une purée de panais</p>
+                        <strong class="list__price">40€</strong>
+                    </div>
+                </div>
+                <div class="list__check">
+                    <i class="fa-solid fa-circle-check list__icon" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="list__meals">
-            <a href="#">
-                <p class="list__name">Magret de canard</p>
-                <p class="list__details">Et parmentier de pommes de terres<strong>35€</strong></p>
-            </a>
+                <div class="list__subtiles">
+                    <h4 class="list__name">Magret de canard</h4>
+                    <div class="list__infos">
+                        <p class="list__details">Et parmentier de pommes de terre</p>
+                        <strong class="list__price">35€</strong>
+                    </div>
+                </div>
+                <div class="list__check">
+                    <i class="fa-solid fa-circle-check list__icon" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="list__meals">
-            <a href="#">
-                <p class="list__name">Pigeonneau d'Ille-et-Vilaine</p>
-                <p class="list__details">Sur son lit de gnocchis aux légumes<strong>44€</strong></p>
-            </a>
+                <div class="list__subtiles">
+                    <h4 class="list__name">Pigeonneau d’Ille-et-Vilaine</h4>
+                    <div class="list__infos">
+                        <p class="list__details">Sur son lit de gnocchis aux légumes</p>
+                        <strong class="list__price">44€</strong>
+                    </div>
+                </div>
+                <div class="list__check">
+                    <i class="fa-solid fa-circle-check list__icon" aria-hidden="true"></i>
+                </div>
+            </div>
             </div>
         </div>
-        <div class="list__desserts">
+        <!--DESSERTS-->
+        <div class="list__category">
             <h3 class="list__h3">Desserts</h3>
+            <div class="list__meals-category">
             <div class="list__meals">
-            <a href="#">
-                <p class="list__name">Pétales de violettes glacés</p>
-                <p class="list__details">Et purée de noisettes<strong>18€</strong></p>
-            </a>
+                <div class="list__subtiles">
+                    <h4 class="list__name">Pétales de violettes glacés</h4>
+                    <div class="list__infos">
+                        <p class="list__details">Et purée de noisettes</p>
+                        <strong class="list__price">18€</strong>
+                    </div>
+                </div>
+                <div class="list__check">
+                    <i class="fa-solid fa-circle-check list__icon" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="list__meals">
-            <a href="#">
-                <p class="list__name">Fondant au chocolat</p>
-                <p class="list__details">Revisité <strong>22€</strong></p>
-            </a>
+                <div class="list__subtiles">
+                    <h4 class="list__name">Fondant au chocolat</h4>
+                    <div class="list__infos">
+                        <p class="list__details">Revisité</p>
+                        <strong class="list__price">22€</strong>
+                    </div>
+                </div>
+                <div class="list__check">
+                    <i class="fa-solid fa-circle-check list__icon" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="list__meals">
-            <a href="#">
-                <p class="list__name">Millefeuille croustillant</p>
-                <p class="list__details">Myrtilles et pâte d'amande<strong>23€</strong></p>
-            </a>
+                <div class="list__subtiles">
+                    <h4 class="list__name">Millefeuille croustillant</h4>
+                    <div class="list__infos">
+                        <p class="list__details">Myrtilles et pâte d’amande</p>
+                        <strong class="list__price">23€</strong>
+                    </div>
+                </div>
+                <div class="list__check">
+                    <i class="fa-solid fa-circle-check list__icon" aria-hidden="true"></i>
+                </div>
+                </div>
             </div>
-        </div>
-        <div class="list__btn">
-        <button class=list__commandbtn>Commander</button>
-        </div>
-        </div>
-        </section>
-        <!--FOOTER-->
-        <footer class="footer">
-            <h3 class="footer__title">ohmyfood</h3>
-            <ul class="footer__ul">
-                <li class="footer__links1"><a href="#"><i class="fa-solid fa-utensils footer__icon" style="padding-right: 5px"></i>Proposer un restaurant</a></li>
-                <li class="footer__links1"><a href="#"><i class="fa-solid fa-handshake-angle footer__icon"></i>Devenir partenaire</a></li>
-                <li class="footer__links2"><a href="#">Mentions légales</a></li>
-                <li class="footer__links2"><a href="ohmyfood@contact.com">Contact</a></li>
-            </ul>
-        </footer>
-    </body>
+        
+    <div class="list__btn">
+    <button class=list__commandbtn>Commander</button>
+    </div>
+    </div>
+    </section>
+    <!--FOOTER-->
+    <footer class="footer">
+        <h3 class="footer__title">ohmyfood</h3>
+        <ul class="footer__ul">
+            <li class="footer__links1"><a href="#"><i class="fa-solid fa-utensils footer__icon" style="padding-right: 5px" aria-hidden="true"></i>Proposer un restaurant</a></li>
+            <li class="footer__links1"><a href="#"><i class="fa-solid fa-handshake-angle footer__icon" aria-hidden="true"></i>Devenir partenaire</a></li>
+            <li class="footer__links2"><a href="#">Mentions légales</a></li>
+            <li class="footer__links2"><a href="ohmyfood@contact.com">Contact</a></li>
+        </ul>
+    </footer>
+</body>
 </html>

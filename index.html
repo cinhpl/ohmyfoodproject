@@ -12,9 +12,15 @@
     </style>
 </head>
     <body>
+        <!--LOADING SPINNER-->
+        <div class="loading">
+            <i class="fa-solid fa-spinner fa-8x loading_icon"></i>
+        </div>
         <!--HEADER-->
         <header>
-            <img src="images/ohmyfood@2x.svg" alt="logo" id="logo">
+            <div class="header__homepage">
+                <img src="images/ohmyfood@2x.svg" alt="logo">
+            </div>
         </header>
         <!--EXPLORATION-->
         <main>
@@ -24,9 +30,9 @@
                     <form><input type="search" class="location__position" name="searchlocation" placeholder="Paris, Belleville"></form>
                 </div>
                 <div class="explore">
-                    <h2 class="explore__title">Réservez le menu qui vous convient</h1>
+                    <h2 class="explore__title">Réservez le menu qui vous convient</h2>
                     <p class="explore__subtiles">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                    <a href="meals" class="explore__btn">Explorer nos restaurants</a>
+                    <a href="#meals" class="explore__btn">Explorer nos restaurants</a>
                 </div>
                 <div class="choice">
                     <h2 class="choice__title">Fonctionnement</h2>
@@ -59,11 +65,11 @@
                         <h3 class="meals__title">La Palette du goût</h3>
                         <p class="meals__loc">Ménilmontant</p>
                         <span class="meals__new">Nouveau</span>
-                        <label class="meals__checkbox">
-                            <input type="checkbox">
-                            <span></span>
-                        </label>
                     </a>
+                    <label class="meals__checkbox">
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
                     </article>
                     <article class="meals__card">
                     <a href="la-note-enchantee.html">
@@ -71,33 +77,33 @@
                         <h3 class="meals__title">La note enchantée</h3>
                         <p class="meals__loc">Charonne</p>
                         <span class="meals__new">Nouveau</span>
-                        <label class="meals__checkbox">
-                            <input type="checkbox">
-                            <span></span>
-                        </label>
                     </a>
+                    <label class="meals__checkbox">
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
                     </article>
                     <article class="meals__card">
                     <a href="a-la-francaise.html">
                         <img src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française" class="meals__img">
                         <h3 class="meals__title">À la française</h3>
                         <p class="meals__loc">Cité rouge</p>
-                        <label class="meals__checkbox">
-                            <input type="checkbox">
-                            <span></span>
-                        </label>
                     </a>
+                    <label class="meals__checkbox">
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
                     </article>
                     <article class="meals__card">
                     <a href="le-delice-des-sens.html">
                         <img src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens" class="meals__img">
                         <h3 class="meals__title">Le délice des sens</h3>
                         <p class="meals__loc">Folie-Méricourt</p>
-                        <label class="meals__checkbox">
-                            <input type="checkbox">
-                            <span></span>
-                        </label>
                     </a>
+                    <label class="meals__checkbox">
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
                     </article>
                 </div>
             </section>
@@ -106,7 +112,7 @@
                 <h3 class="footer__title">ohmyfood</h3>
                 <ul class="footer__ul">
                     <li class="footer__links1"><a href="#"><i class="fa-solid fa-utensils footer__icon" style="padding-right: 5px" aria-hidden="true"></i>Proposer un restaurant</a></li>
-                    <li class="footer__links1"><a href="#"><i class="fa-solid fa-handshake-angle footer__icon" ></i>Devenir partenaire</a></li>
+                    <li class="footer__links1"><a href="#"><i class="fa-solid fa-handshake-angle footer__icon" aria-hidden="true"></i>Devenir partenaire</a></li>
                     <li class="footer__links2"><a href="#">Mentions légales</a></li>
                     <li class="footer__links2"><a href="ohmyfood@contact.com">Contact</a></li>
                 </ul>

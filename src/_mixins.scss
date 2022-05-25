@@ -26,11 +26,13 @@
     background-color: #9356DC;
     color: white;
     border-radius: 50%;
-    height: 25px;
-    width: 25px;
+    height: 22px;
+    width: 26px;
+    font-size: 14px;
     text-align: center;
     font-weight: 300;  
     margin: 0 30px 0 -45px;
+    padding-top: 4px;
 }
 
 @mixin btn {
@@ -43,4 +45,10 @@
     background-image: linear-gradient(to top left,#9356DC, #FF79DA);
     transition : 0.2s ease-in-out;
     cursor: pointer;
+}
+
+@mixin ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }

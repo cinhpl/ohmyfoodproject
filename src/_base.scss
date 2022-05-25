@@ -8,3 +8,25 @@ h2 {
     font-weight: 800;
 }
 
+.loading {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    z-index: 1;
+    opacity: 0.9;
+    animation: loading 4s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+        animation: spinner 2s infinite linear;
+        background: linear-gradient(to top, $primary-color, $secondary-color, $tertiary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+
+
