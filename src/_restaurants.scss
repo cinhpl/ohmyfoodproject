@@ -19,15 +19,16 @@
         font-weight: 900;      
     }
 }
-
 /*   MEALS   */
 .list {
     &__img {
         width: 100%;
-        height: 100%;
         z-index: 1;
         position: relative;
+        max-height: 30rem;
+        object-fit: cover;
     }
+
     &__choices {
         padding: 20px;
         border-radius: 50px 50px 0 0;
@@ -51,11 +52,12 @@
     &__checkbox input {   
         opacity: 0;
     }
+    /*   LISTS    */
     &__h3 {
         text-transform: uppercase;
         font-size: 16px;
         font-weight: 500;
-        color: $greytitle-color;
+        color: $grey-color;
         border-bottom: 3px solid $tertiary-color;
         padding-bottom: 5px;
         width: 40px;
@@ -80,13 +82,15 @@
         display: flex;
         animation: appear 1s;
         animation-fill-mode: both;
+        height: 60px;
+        max-width: 100%;
     }
     &__subtiles {
         display: flex;
         flex-direction: column;
         margin: 0;
-        width: 90%;
         padding: 10px;
+        width: 90%;
     }
     &__infos {
         display: flex;
@@ -102,9 +106,6 @@
     &__details {
         margin: 0;
         @include mixins.ellipsis;
-    }
-    &__price {
-
     }
     &__check {
         margin-right: -30px;
@@ -139,10 +140,10 @@
     }
     &__commandbtn {
         @include mixins.btn;
+        @include mixins.box-shadow;
         border: none;
         padding: 15px 50px 15px 50px;
     }
-
     .list__check:hover .list__icon {
         transform: rotate(359deg);
         transition: transform 500ms;

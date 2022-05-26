@@ -52,3 +52,25 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+@mixin heart-unchecked {
+    content: "\f004";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 500;
+    color: inherit;
+    font-size: 28px;
+}
+
+@mixin heart-checked {
+    content: '\f004';
+    font-family: fontAwesome;
+    background: linear-gradient(to top left,#9356DC, #FF79DA);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

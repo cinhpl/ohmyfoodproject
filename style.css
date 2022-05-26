@@ -16,7 +16,7 @@ h2 {
   background-color: white;
   z-index: 1;
   opacity: 0.9;
-  animation: loading 4s forwards;
+  animation: loading 2s forwards;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +37,7 @@ h2 {
 /*   EXPLORATION    */
 nav .location {
   background-color: #ECECEC;
-  padding: 20px 20px 20px 100px;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -99,9 +99,12 @@ nav .choice__counter {
 }
 nav .choice__icon {
   margin-right: 15px;
+  color: #797979;
 }
 nav .choice__steps {
   padding: 0px 20px 20px 50px;
+  display: flex;
+  flex-direction: column;
 }
 nav .choice__step {
   list-style-type: none;
@@ -120,8 +123,9 @@ nav .choice__step:hover {
   background-color: #f0e9fa;
   cursor: pointer;
   transform: scale(1.02);
+  box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.4);
 }
-nav .choice__step:hover .choice__icon {
+nav .choice .choice__step:hover .choice__icon {
   color: #9356DC;
 }
 
@@ -149,6 +153,10 @@ nav .choice__step:hover .choice__icon {
   height: 200px;
   object-fit: cover;
   border-radius: 25px 25px 0 0;
+  filter: brightness(90%);
+}
+.meals__img:hover {
+  filter: brightness(1.05);
 }
 .meals__title {
   padding: 10px 0 5px 15px;
@@ -254,11 +262,15 @@ input[type=checkbox]:checked + span:before {
 }
 
 /*   MEALS   */
+.list {
+  /*   LISTS    */
+}
 .list__img {
   width: 100%;
-  height: 100%;
   z-index: 1;
   position: relative;
+  max-height: 30rem;
+  object-fit: cover;
 }
 .list__choices {
   padding: 20px;
@@ -287,7 +299,7 @@ input[type=checkbox]:checked + span:before {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
-  color: #525252;
+  color: #797979;
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 5px;
   width: 40px;
@@ -307,6 +319,8 @@ input[type=checkbox]:checked + span:before {
   display: flex;
   animation: appear 1s;
   animation-fill-mode: both;
+  height: 60px;
+  max-width: 100%;
 }
 .list__meals:nth-child(1) {
   animation-delay: 100ms;
@@ -321,8 +335,8 @@ input[type=checkbox]:checked + span:before {
   display: flex;
   flex-direction: column;
   margin: 0;
-  width: 90%;
   padding: 10px;
+  width: 90%;
 }
 .list__infos {
   display: flex;
@@ -386,6 +400,7 @@ input[type=checkbox]:checked + span:before {
   background-image: linear-gradient(to top left, #9356DC, #FF79DA);
   transition: 0.2s ease-in-out;
   cursor: pointer;
+  box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
   border: none;
   padding: 15px 50px 15px 50px;
 }
@@ -456,6 +471,77 @@ input[type=checkbox]:checked + span:before {
 .footer a {
   text-decoration: none;
   color: white;
+}
+
+@media (min-width: 991px) {
+  /*   HOMEPAGE  */
+  body {
+    max-width: 100%;
+    justify-content: center;
+    margin: auto;
+  }
+
+  nav .location__icon {
+    font-size: 20px;
+  }
+  nav .location__position {
+    font-size: 20px;
+  }
+
+  .explore a {
+    transform: scale(1.02);
+  }
+
+  .choice {
+    margin: 0 200px 0 200px;
+  }
+}
+#meals h2 {
+  margin: 0 200px 20px 200px;
+}
+
+.meals {
+  margin: 0 200px 0 185px;
+  display: flex;
+  flex-direction: row;
+}
+.meals__card {
+  margin: 15px;
+}
+
+/*  RESTAURANTS  */
+.list__title {
+  text-align: center;
+}
+.list__choices {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+  margin-left: 200px;
+}
+.list__meals-category {
+  display: flex;
+  justify-content: center;
+  margin: 0 70px 0;
+}
+
+/*   FOOTER   */
+.footer {
+  display: flex;
+}
+.footer__title {
+  margin-right: 50px;
+}
+.footer__ul {
+  margin: 0;
+  display: flex;
+}
+.footer__links1 {
+  padding: 0 7% 0 7%;
+}
+.footer__links2 {
+  padding: 0 7% 0 7%;
 }
 
 /*# sourceMappingURL=style.css.map */
