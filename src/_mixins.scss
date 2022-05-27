@@ -8,7 +8,7 @@
 }
 
 @mixin linearGradient {
-    background-image: linear-gradient(to top left, #9356DC,$secondary-color);
+    background-image: linear-gradient(to top left, $primary-color, $secondary-color);
 }
 
 @mixin new {
@@ -23,7 +23,7 @@
 }
 
 @mixin counter {
-    background-color: #9356DC;
+    background-color: $primary-color;
     color: white;
     border-radius: 50%;
     height: 22px;
@@ -42,7 +42,7 @@
     font-size: 15px;
     font-weight: 400;
     padding: 15px 20px 15px 20px;
-    background-image: linear-gradient(to top left,#9356DC, #FF79DA);
+    background-image: linear-gradient(to top left,$primary-color, $secondary-color);
     transition : 0.2s ease-in-out;
     cursor: pointer;
 }
@@ -69,7 +69,7 @@
 @mixin heart-checked {
     content: '\f004';
     font-family: fontAwesome;
-    background: linear-gradient(to top left,#9356DC, #FF79DA);
+    background: linear-gradient(to top left, $primary-color, $secondary-color);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

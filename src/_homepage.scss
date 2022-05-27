@@ -1,4 +1,3 @@
-@use "../src/mixins";
 
 /*   HEADER   */
 .header__homepage {
@@ -39,10 +38,13 @@ nav {
             color: #616161;
         }
         &__btn {
-            @include mixins.box-shadow;
-            @include mixins.btn;
+            @include box-shadow;
+            @include btn;
             }
-           }        
+           }   
+    .eplore a {
+        @include transform;
+    }     
     .choice {
         padding: 15px 5px 5px 5px;
         margin-right: 20px;
@@ -50,7 +52,7 @@ nav {
             padding-left: 20px;
         }
         &__counter {
-            @include mixins.counter;
+            @include counter;
         }
         &__icon {
             margin-right: 15px;
@@ -72,11 +74,11 @@ nav {
             flex-wrap: wrap;
             font-weight: bold;
             background-color: $primary-background-color;
-            @include mixins.box-shadow;
+            @include box-shadow;
                 &:hover {
                     background-color: #f0e9fa;
                     cursor: pointer;
-                    @include mixins.transform;
+                    @include transform;
                     box-shadow: 4px 4px 10px rgba(173, 173, 173, 40%)              
             }
         }
@@ -92,16 +94,21 @@ nav {
     padding: 20px;
     }
     .meals {
+        
         &__card {
             width: 100%;
             height: 280px;
             border-radius: 25px;
             margin-bottom: 35px;
             background-color: white;
-            @include mixins.box-shadow;
+            @include box-shadow;
             position: relative;
             &:hover {
-                @include mixins.transform;
+                @include transform;
+            }               
+            filter: brightness(100%);
+            &:hover {
+                filter: brightness(1.10);
             }
         }  
         &__img {
@@ -109,10 +116,6 @@ nav {
             height: 200px;
             object-fit: cover;
             border-radius: 25px 25px 0 0;
-            filter: brightness(90%);
-            &:hover {
-                filter: brightness(1.05);
-            }
             }
         &__title {
             padding: 10px 0 5px 15px;
@@ -123,7 +126,7 @@ nav {
             padding-left: 15px;
         }
         &__new {
-            @include mixins.new;
+            @include new;
         }       
         &__checkbox {
             position: absolute;
@@ -137,10 +140,11 @@ nav {
         }
     }
     input[type="checkbox"] + span:before {
-        @include mixins.heart-unchecked;
+        @include heart-unchecked;
     }
     input[type="checkbox"]:checked + span:before {
-        @include mixins.heart-checked;
+        @include heart-checked;
+        animation: heart 1s;
     }
     .meals a {
         text-decoration: none;
