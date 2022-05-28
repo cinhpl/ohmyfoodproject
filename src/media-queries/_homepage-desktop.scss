@@ -1,0 +1,30 @@
+@media (min-width: 991px) {
+.navchoice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.explore {
+    border-radius: 20px;
+}
+.choice {
+margin: 0 50px 0 50px;
+&__title {
+    text-align: center;
+}
+&__steps {
+    display: flex;
+}
+}
+#meals h2 {
+    text-align: center;
+}
+.meals {
+display: flex;
+flex-direction: row;
+margin: 0 50px 0 50px;
+&__card {
+    margin: 20px;
+}
+}
+}

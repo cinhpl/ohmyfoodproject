@@ -5,8 +5,10 @@
 @import "restaurants";
 @import "animations";
 @import "footer";
-@import "footer-desktop";
-@import "homepage-desktop"
+
+@import "media-queries/homepage-desktop";
+@import "media-queries/restaurants-desktop";
+@import "media-queries/footer-desktop";
 
 
 

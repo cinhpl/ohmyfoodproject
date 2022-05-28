@@ -1,0 +1,33 @@
+@media (min-width: 991px) {
+    .list {
+        &__choices {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 70%;
+            margin-left: 200px;
+        }
+        &__title {
+            text-align: center;
+
+        }
+        &__h3 {
+            text-align: center;            
+            justify-content: center;
+           
+        }
+        &__meals {
+            margin: 0 0 0 0;
+            display: flex;
+            flex-direction: row;
+            &__card {
+                margin: 15px;
+                width: 50%;
+            }
+        }    
+        &__boxmeals {
+            display: flex;
+        }
+        }
+    
+}

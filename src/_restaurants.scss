@@ -35,21 +35,11 @@
         margin: -80px 0 0 0;
         z-index: 10;
         position: relative;
-        @media (min-width: 991px) {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 70%;
-            margin-left: 200px;
-        }
     }
     &__title {
         font-family: "Shrikhand", sans-serif;
         font-weight: 500;
         font-size: 30px;
-        @media (min-width: 991px) {
-            text-align: center;
-        }
     }
     &__checkbox {
         position: absolute;
@@ -70,9 +60,6 @@
         border-bottom: 3px solid $tertiary-color;
         padding-bottom: 5px;
         width: 40px;
-        @media (min-width: 991px) {
-            text-align: center;
-        }
     }
     &__dishes {
         padding-top: 20px;
@@ -96,13 +83,18 @@
         animation-fill-mode: both;
         height: 60px;
         max-width: 100%;
-        @media (min-width: 991px) {
-            margin: 0 200px 0 185px;
-            display: flex;
-            flex-direction: row;
-            &__card {
-                margin: 15px;
-            }
+        animation: check reverse 1500ms ease-in-out;
+        &:hover {
+            cursor: pointer;
+            @include transform;
+        }
+        &:hover .list__check{
+            cursor: pointer;
+            transform: scaleX(1)
+        }
+        &:hover .list__icon {
+        transform: rotate(359deg);
+        transition: transform 500ms;
         }
     }
     &__subtiles {
@@ -127,31 +119,15 @@
         margin: 0;
         @include ellipsis;
     }
-    &__check {
-        margin-right: -30px;
-        top: 0;
-        background-color: $tertiary-color;
-        padding: 20px;
-        color: white;
-        width: 30px;
-        border-radius: 0 20px 20px 0;
-        text-align: center;
-        font-size: 20px;
-        transition: 0.3s;
-        opacity: 0;
-        display: flex;
-        @include box-shadow;
-        &:hover {
-            margin-right: 0;
-            opacity: 1;
-        }
-    } 
-    &__icon {
-        border-radius: 100px;
-    }
     &__meals a {
         text-decoration: none;
         color: black;
+    }
+    &__check {
+        @include check;
+    }
+    &__icon {
+
     }
     &__btn {
         justify-content: center;
@@ -164,9 +140,4 @@
         border: none;
         padding: 15px 50px 15px 50px;
     }
-    .list__check:hover .list__icon {
-        transform: rotate(359deg);
-        transition: transform 500ms;
-        } 
 }
-

@@ -94,7 +94,6 @@ nav {
     padding: 20px;
     }
     .meals {
-        
         &__card {
             width: 100%;
             height: 280px;
@@ -130,7 +129,7 @@ nav {
         }       
         &__checkbox {
             position: absolute;
-            right: 30px;
+            right: 40px;
             bottom: 25px;
             cursor: pointer;
             font-size: 28px;

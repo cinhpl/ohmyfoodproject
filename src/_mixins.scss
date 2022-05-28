@@ -1,3 +1,4 @@
+@use "variables" as v;
 
 @mixin box-shadow {
     box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
@@ -8,7 +9,7 @@
 }
 
 @mixin linearGradient {
-    background-image: linear-gradient(to top left, $primary-color, $secondary-color);
+    background-image: linear-gradient(to top left, v.$primary-color, variables.$secondary-color);
 }
 
 @mixin new {
@@ -74,3 +75,21 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+@mixin check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $tertiary-color;
+    width: 50px;
+    height: auto;
+    border-radius: 0 20px 20px 0;
+    padding: 10px;
+    right: 20px;
+    transform: scaleX(0);
+    transition: 300ms ease-in-out;
+    transform-origin: right;
+    color: white;
+    font-size: 20px;
+}
+
