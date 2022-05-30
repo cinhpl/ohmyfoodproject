@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css"> 
     <link href="fontawesome/css/all.css" rel="stylesheet">   
-    <title>lapalettedugout</title>
+    <title>La palette du goût</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Shrikhand&display=swap');
     </style>
 </head>
+<body>
 <!--HEADER-->
 <header class="header">
     <div class="header__nav">
-    <a href="index.html"><i class="fa-solid fa-arrow-left header__icon"></i></i></a>
+    <a href="index.html"><i class="fa-solid fa-arrow-left header__icon" aria-hidden="true"></i></a>
     <img src="images/ohmyfood@2x.svg" alt ="logo" class="header__logo">
     </div>
 </header>
 <!--MENU-->
-<body>
     <section class="list">
     <img src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo" class="list__img">
     <div class="list__choices">
@@ -159,7 +159,8 @@
     </div>
     </section>
     <!--FOOTER-->
-    <footer class="footer">
+    <footer>
+        <div class="footer">
         <h3 class="footer__title">ohmyfood</h3>
         <ul class="footer__ul">
             <li class="footer__links1"><a href="#"><i class="fa-solid fa-utensils footer__icon" style="padding-right: 5px" aria-hidden="true"></i>Proposer un restaurant</a></li>
@@ -167,6 +168,7 @@
             <li class="footer__links2"><a href="#">Mentions légales</a></li>
             <li class="footer__links2"><a href="ohmyfood@contact.com">Contact</a></li>
         </ul>
+        </div>
     </footer>
 </body>
 </html>

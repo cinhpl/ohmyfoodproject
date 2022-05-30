@@ -18,6 +18,11 @@
         font-size: 20px;
         font-weight: 900;      
     }
+    &__logo {
+        @media (min-width: 992px) {
+            margin-left: 8%;
+        }
+    }
 }
 /*   MEALS   */
 .list {
@@ -81,8 +86,6 @@
         display: flex;
         animation: appear 1s;
         animation-fill-mode: both;
-        height: 60px;
-        max-width: 100%;
         animation: check reverse 1500ms ease-in-out;
         &:hover {
             cursor: pointer;
@@ -90,7 +93,8 @@
         }
         &:hover .list__check{
             cursor: pointer;
-            transform: scaleX(1)
+            transform: scaleX(1);
+            flex: 25%;
         }
         &:hover .list__icon {
         transform: rotate(359deg);
@@ -102,7 +106,8 @@
         flex-direction: column;
         margin: 0;
         padding: 10px;
-        width: 90%;
+        flex: 100%;
+        @include ellipsis;
     }
     &__infos {
         display: flex;
@@ -126,9 +131,6 @@
     &__check {
         @include check;
     }
-    &__icon {
-
-    }
     &__btn {
         justify-content: center;
         display: flex;
@@ -139,5 +141,8 @@
         @include box-shadow;
         border: none;
         padding: 15px 50px 15px 50px;
+        &:hover {
+            @include transform;
+        }
     }
 }

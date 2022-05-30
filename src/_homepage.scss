@@ -40,10 +40,11 @@ nav {
         &__btn {
             @include box-shadow;
             @include btn;
-            }
+        }
            }   
-    .eplore a {
+    .explore__btn:hover {
         @include transform;
+        background-color: #616161;
     }     
     .choice {
         padding: 15px 5px 5px 5px;
@@ -108,6 +109,13 @@ nav {
             filter: brightness(100%);
             &:hover {
                 filter: brightness(1.10);
+            }
+            @media (max-width: 991px) and (min-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                &__card {
+                    margin: 20px;
+                }
             }
         }  
         &__img {
