@@ -40,6 +40,7 @@ h2 {
   background: linear-gradient(to top, #9356DC, #FF79DA, #99E2D0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 260px;
 }
 
 /*   HEADER   */
@@ -90,10 +91,6 @@ nav .explore__btn {
   padding: 15px 20px 15px 20px;
   background-image: linear-gradient(to top left, #9356DC, #FF79DA);
   cursor: pointer;
-}
-nav .explore__btn:hover {
-  transform: scale(1.02);
-  background-color: #616161;
 }
 nav .choice {
   padding: 15px 5px 5px 5px;
