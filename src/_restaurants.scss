@@ -83,23 +83,25 @@
         @include box-shadow;
         margin-bottom: 10px;
         position: relative;
-        display: flex;
         animation: appear 1s;
         animation-fill-mode: both;
         animation: check reverse 1500ms ease-in-out;
         &:hover {
             cursor: pointer;
             @include transform;
-        }
-        &:hover .list__check{
+        }      
+        label {
+            display: flex;
             cursor: pointer;
+        }
+        input[type="checkbox"]:checked + .list__check {
             transform: scaleX(1);
             flex: 25%;
-        }
-        &:hover .list__icon {
-        transform: rotate(359deg);
-        transition: transform 500ms;
-        }
+            & .list__icon {
+                transform: rotate(359deg);
+                transition: transform 900ms;
+            }         }
+
     }
     &__subtiles {
         display: flex;
@@ -144,5 +146,8 @@
         &:hover {
             @include transform;
         }
+    }
+    &__mealscheck {
+        display: none;
     }
 }

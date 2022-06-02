@@ -37,9 +37,15 @@ nav {
             margin-bottom: 40px;
             color: #616161;
         }
+        &__a {
+            text-decoration: none;
+        }
         &__btn {
             @include box-shadow;
             @include btn;
+            &:hover {
+                @include transform;
+            }
         }
            }   
     .choice {
@@ -139,7 +145,7 @@ nav {
             font-size: 28px;
         }
         &__checkbox input {   
-            opacity: 0;
+            display: none;
         }
     }
     input[type="checkbox"] + span:before {

@@ -81,6 +81,9 @@ nav .explore__subtiles {
   margin-bottom: 40px;
   color: #616161;
 }
+nav .explore__a {
+  text-decoration: none;
+}
 nav .explore__btn {
   box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
   border-radius: 35px;
@@ -88,9 +91,14 @@ nav .explore__btn {
   text-decoration: none;
   font-size: 15px;
   font-weight: 400;
+  width: 200px;
   padding: 15px 20px 15px 20px;
   background-image: linear-gradient(to top left, #9356DC, #FF79DA);
   cursor: pointer;
+  margin: auto;
+}
+nav .explore__btn:hover {
+  transform: scale(1.02);
 }
 nav .choice {
   padding: 15px 5px 5px 5px;
@@ -207,7 +215,7 @@ nav .choice .choice__step:hover .choice__icon {
   font-size: 28px;
 }
 .meals__checkbox input {
-  opacity: 0;
+  display: none;
 }
 
 input[type=checkbox] + span:before {
@@ -363,7 +371,6 @@ input[type=checkbox]:checked + span:before {
   box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
   margin-bottom: 10px;
   position: relative;
-  display: flex;
   animation: appear 1s;
   animation-fill-mode: both;
   animation: check reverse 1500ms ease-in-out;
@@ -381,14 +388,17 @@ input[type=checkbox]:checked + span:before {
   cursor: pointer;
   transform: scale(1.02);
 }
-.list__meals:hover .list__check {
+.list__meals label {
+  display: flex;
   cursor: pointer;
+}
+.list__meals input[type=checkbox]:checked + .list__check {
   transform: scaleX(1);
   flex: 25%;
 }
-.list__meals:hover .list__icon {
+.list__meals input[type=checkbox]:checked + .list__check .list__icon {
   transform: rotate(359deg);
-  transition: transform 500ms;
+  transition: transform 900ms;
 }
 .list__subtiles {
   display: flex;
@@ -453,15 +463,20 @@ input[type=checkbox]:checked + span:before {
   text-decoration: none;
   font-size: 15px;
   font-weight: 400;
+  width: 200px;
   padding: 15px 20px 15px 20px;
   background-image: linear-gradient(to top left, #9356DC, #FF79DA);
   cursor: pointer;
+  margin: auto;
   box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
   border: none;
   padding: 15px 50px 15px 50px;
 }
 .list__commandbtn:hover {
   transform: scale(1.02);
+}
+.list__mealscheck {
+  display: none;
 }
 
 @keyframes heart {
@@ -608,8 +623,10 @@ input[type=checkbox]:checked + span:before {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 40%;
-    margin-left: 27%;
+    max-width: 800px;
+    min-width: 400px;
+    margin: auto;
+    padding-top: 50px;
   }
   .list__title {
     text-align: center;

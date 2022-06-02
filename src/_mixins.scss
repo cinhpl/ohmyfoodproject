@@ -42,9 +42,11 @@
     text-decoration: none;
     font-size: 15px;
     font-weight: 400;
+    width: 200px;
     padding: 15px 20px 15px 20px;
     background-image: linear-gradient(to top left,$primary-color, $secondary-color);
     cursor: pointer;
+    margin: auto;
 }
 
 @mixin ellipsis {
