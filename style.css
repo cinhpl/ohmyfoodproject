@@ -384,6 +384,9 @@ input[type=checkbox]:checked + span:before {
 .list__meals:nth-child(3) {
   animation-delay: 300ms;
 }
+.list__meals:nth-child(4) {
+  animation-delay: 400ms;
+}
 .list__meals:hover {
   cursor: pointer;
   transform: scale(1.02);
@@ -541,7 +544,7 @@ input[type=checkbox]:checked + span:before {
 @media (min-width: 992px) {
   .footer__title {
     text-align: center;
-    margin-right: 70px;
+    margin: auto;
   }
 }
 .footer__ul {
@@ -626,7 +629,7 @@ input[type=checkbox]:checked + span:before {
     max-width: 800px;
     min-width: 400px;
     margin: auto;
-    padding-top: 50px;
+    margin-top: -150px;
   }
   .list__title {
     text-align: center;
@@ -637,7 +640,8 @@ input[type=checkbox]:checked + span:before {
     margin-left: 25%;
   }
   .list__meals {
-    margin: 0 20% 0 20%;
+    margin: auto;
+    width: 70%;
   }
   .list__meals__card {
     margin: 15px;

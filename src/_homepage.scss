@@ -1,4 +1,3 @@
-
 /*   HEADER   */
 .header__homepage {
     text-align: center;
@@ -43,11 +42,12 @@ nav {
         &__btn {
             @include box-shadow;
             @include btn;
+
             &:hover {
                 @include transform;
             }
         }
-           }   
+    }
     .choice {
         padding: 15px 5px 5px 5px;
         margin-right: 20px;
@@ -78,84 +78,88 @@ nav {
             font-weight: bold;
             background-color: $primary-background-color;
             @include box-shadow;
-                &:hover {
-                    background-color: #f0e9fa;
-                    cursor: pointer;
-                    @include transform;
-                    box-shadow: 4px 4px 10px rgba(173, 173, 173, 40%)              
+            &:hover {
+                background-color: #f0e9fa;
+                cursor: pointer;
+                @include transform;
+                box-shadow: 4px 4px 10px rgba(173, 173, 173, 40%)
             }
         }
         .choice__step:hover .choice__icon {
             color: $primary-color;
         }
-        }
     }
+}
+
 /*   RESTAURANTS   */
-    #meals {
+#meals {
     margin: 0;
     background-color: $primary-background-color;
     padding: 20px;
-    }
-    .meals {
-        &__card {
-            width: 100%;
-            height: 280px;
-            border-radius: 25px;
-            margin-bottom: 35px;
-            background-color: white;
-            @include box-shadow;
-            position: relative;
-            &:hover {
-                @include transform;
-            }               
-            filter: brightness(100%);
-            &:hover {
-                filter: brightness(1.10);
+}
+.meals {
+    &__card {
+        width: 100%;
+        height: 280px;
+        border-radius: 25px;
+        margin-bottom: 35px;
+        background-color: white;
+        @include box-shadow;
+        position: relative;
+        &:hover {
+            @include transform;
+        }
+        filter: brightness(100%);
+        &:hover {
+            filter: brightness(1.10);
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            &__card {
+                margin: 20px;
             }
-            @media (max-width: 991px) and (min-width: 768px) {
-                display: flex;
-                flex-direction: column;
-                &__card {
-                    margin: 20px;
-                }
-            }
-        }  
-        &__img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 25px 25px 0 0;
-            }
-        &__title {
-            padding: 10px 0 5px 15px;
-            margin: 0;
-        }
-        &__loc {
-            margin: 0;
-            padding-left: 15px;
-        }
-        &__new {
-            @include new;
-        }       
-        &__checkbox {
-            position: absolute;
-            right: 40px;
-            bottom: 25px;
-            cursor: pointer;
-            font-size: 28px;
-        }
-        &__checkbox input {   
-            display: none;
         }
     }
-    input[type="checkbox"] + span:before {
-        @include heart-unchecked;
+    &__img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 25px 25px 0 0;
     }
-    input[type="checkbox"]:checked + span:before {
-        @include heart-checked;
-        animation: heart 1s;
+    &__title {
+        padding: 10px 0 5px 15px;
+        margin: 0;
     }
-    .meals a {
-        text-decoration: none;
-        color: black;
+    &__loc {
+        margin: 0;
+        padding-left: 15px;
     }
+    &__new {
+        @include new;
+    }
+    &__checkbox {
+        position: absolute;
+        right: 40px;
+        bottom: 25px;
+        cursor: pointer;
+        font-size: 28px;
+    }
+    &__checkbox input {
+        display: none;
+    }
+}
+
+input[type="checkbox"]+span:before {
+    @include heart-unchecked;
+}
+
+input[type="checkbox"]:checked+span:before {
+    @include heart-checked;
+    animation: heart 1s;
+}
+
+.meals a {
+    text-decoration: none;
+    color: black;
+}

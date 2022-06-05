@@ -11,7 +11,7 @@
         margin: 0;
         @media (min-width: 992px) {
             text-align: center;
-            margin-right: 70px;      
+            margin: auto;      
         }
     }
     &__ul {
@@ -43,7 +43,6 @@
         margin-right: 15px;
     }
 }
-
 .footer a {
     text-decoration: none;
     color: white;

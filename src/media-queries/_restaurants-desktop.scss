@@ -7,8 +7,8 @@
             justify-content: space-between;
             max-width: 800px;
             min-width: 400px;
-            margin:auto;
-            padding-top: 50px;
+            margin: auto;
+            margin-top: -150px;
         }
         &__title {
             text-align: center;
@@ -19,7 +19,8 @@
             margin-left: 25%;
         }
         &__meals {
-            margin: 0 20% 0 20%;
+            margin: auto;
+            width: 70%;
             &__card {
                 margin: 15px;
             }

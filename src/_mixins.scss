@@ -1,17 +1,14 @@
-@use "variables" as v;
+@use "variables"as v;
 
 @mixin box-shadow {
     box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
 }
-
 @mixin transform {
     transform: scale(1.02);
 }
-
 @mixin linearGradient {
     background-image: linear-gradient(to top left, v.$primary-color, variables.$secondary-color);
 }
-
 @mixin new {
     background-color: #99E2D0;
     padding: 7px 15px 7px 15px;
@@ -20,9 +17,8 @@
     position: absolute;
     right: 10px;
     top: 10px;
-    color:#24a182;
+    color: #24a182;
 }
-
 @mixin counter {
     background-color: $primary-color;
     color: white;
@@ -31,11 +27,10 @@
     width: 26px;
     font-size: 14px;
     text-align: center;
-    font-weight: 300;  
+    font-weight: 300;
     margin: 0 30px 0 -45px;
     padding-top: 4px;
 }
-
 @mixin btn {
     border-radius: 35px;
     color: white;
@@ -44,17 +39,15 @@
     font-weight: 400;
     width: 200px;
     padding: 15px 20px 15px 20px;
-    background-image: linear-gradient(to top left,$primary-color, $secondary-color);
+    background-image: linear-gradient(to top left, $primary-color, $secondary-color);
     cursor: pointer;
     margin: auto;
 }
-
 @mixin ellipsis {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-
 @mixin heart-unchecked {
     content: "\f004";
     display: inline-block;
@@ -67,7 +60,6 @@
     color: inherit;
     font-size: 28px;
 }
-
 @mixin heart-checked {
     content: '\f004';
     font-family: fontAwesome;
@@ -76,10 +68,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 @mixin check {
     flex: 0%;
-    white-space: nowrap; 
+    white-space: nowrap;
     transform: translateX(100px);
     cursor: pointer;
     display: flex;
@@ -94,4 +85,3 @@
     color: white;
     font-size: 20px;
 }
-
