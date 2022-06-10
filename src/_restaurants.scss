@@ -84,9 +84,7 @@
         @include box-shadow;
         margin-bottom: 10px;
         position: relative;
-        animation: appear 1s;
         animation-fill-mode: both;
-        animation: check reverse 1500ms ease-in-out;
 
         &:hover {
             cursor: pointer;

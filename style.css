@@ -246,6 +246,7 @@ input[type=checkbox]:checked + span:before {
   color: black;
 }
 
+/* animation heart gradual fade */
 @keyframes heart {
   from {
     opacity: 0;
@@ -254,16 +255,7 @@ input[type=checkbox]:checked + span:before {
     opacity: 1;
   }
 }
-@keyframes appear {
-  from {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  to {
-    transform: transalteY(0);
-    opacity: 1;
-  }
-}
+/* animation loading spinner */
 @keyframes loading {
   0% {
     transform: scale(1);
@@ -280,16 +272,6 @@ input[type=checkbox]:checked + span:before {
 @keyframes spinner {
   to {
     transform: rotate(360deg);
-  }
-}
-@keyframes check {
-  from {
-    transform: translateY(-1%);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(200%);
-    opacity: 0;
   }
 }
 /*   HEADER   */
@@ -371,9 +353,7 @@ input[type=checkbox]:checked + span:before {
   box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
   margin-bottom: 10px;
   position: relative;
-  animation: appear 1s;
   animation-fill-mode: both;
-  animation: check reverse 1500ms ease-in-out;
 }
 .list__meals:nth-child(1) {
   animation-delay: 100ms;
@@ -482,6 +462,7 @@ input[type=checkbox]:checked + span:before {
   display: none;
 }
 
+/* animation heart gradual fade */
 @keyframes heart {
   from {
     opacity: 0;
@@ -490,16 +471,7 @@ input[type=checkbox]:checked + span:before {
     opacity: 1;
   }
 }
-@keyframes appear {
-  from {
-    transform: translateY(50%);
-    opacity: 0;
-  }
-  to {
-    transform: transalteY(0);
-    opacity: 1;
-  }
-}
+/* animation loading spinner */
 @keyframes loading {
   0% {
     transform: scale(1);
@@ -516,16 +488,6 @@ input[type=checkbox]:checked + span:before {
 @keyframes spinner {
   to {
     transform: rotate(360deg);
-  }
-}
-@keyframes check {
-  from {
-    transform: translateY(-1%);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(200%);
-    opacity: 0;
   }
 }
 /*   FOOTER   */
