@@ -3,11 +3,13 @@
 /*   HEADER   */
 .header {
     position: relative;
+
     &__nav {
         margin: 15px;
         text-align: center;
         width: 90%;
     }
+
     &__icon {
         position: absolute;
         left: 50px;
@@ -17,6 +19,7 @@
         font-size: 20px;
         font-weight: 900;
     }
+
     &__logo {
         @media (min-width: 992px) {
             margin-left: 8%;
@@ -33,6 +36,7 @@
         max-height: 30rem;
         object-fit: cover;
     }
+
     &__choices {
         padding: 20px;
         border-radius: 50px 50px 0 0;
@@ -41,11 +45,13 @@
         z-index: 10;
         position: relative;
     }
+
     &__title {
         font-family: "Shrikhand", sans-serif;
         font-weight: 500;
         font-size: 30px;
     }
+
     &__checkbox {
         position: absolute;
         right: 40px;
@@ -53,6 +59,7 @@
         cursor: pointer;
         font-size: 28px;
     }
+
     &__checkbox input {
         opacity: 0;
     }
@@ -67,18 +74,22 @@
         padding-bottom: 5px;
         width: 40px;
     }
+
     &__dishes {
         padding-top: 20px;
     }
+
     &__desserts {
         padding: 20px 0 0 0;
     }
+
     &__meals {
         @for $i from 1 through 4 {
             &:nth-child(#{$i}) {
                 animation-delay: 100ms * $i;
             }
         }
+
         background-color: white;
         border-radius: 20px;
         @include box-shadow;
@@ -90,10 +101,12 @@
             cursor: pointer;
             @include transform;
         }
+
         label {
             display: flex;
             cursor: pointer;
         }
+
         input[type="checkbox"]:checked+.list__check {
             transform: scaleX(1);
             flex: 25%;
@@ -104,6 +117,7 @@
             }
         }
     }
+
     &__subtiles {
         display: flex;
         flex-direction: column;
@@ -112,42 +126,51 @@
         flex: 100%;
         @include ellipsis;
     }
+
     &__infos {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         @include ellipsis;
     }
+
     &__name {
         font-weight: bold;
         margin: 0;
         @include ellipsis;
     }
+
     &__details {
         margin: 0;
         @include ellipsis;
     }
+
     &__meals a {
         text-decoration: none;
         color: black;
     }
+
     &__check {
         @include check;
     }
+
     &__btn {
         justify-content: center;
         display: flex;
         margin: 40px 0 60px 0;
     }
+
     &__commandbtn {
         @include btn;
         @include box-shadow;
         border: none;
         padding: 15px 50px 15px 50px;
+
         &:hover {
             @include transform;
         }
     }
+
     &__mealscheck {
         display: none;
     }

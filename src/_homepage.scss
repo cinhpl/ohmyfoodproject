@@ -14,10 +14,12 @@ nav {
         justify-content: center;
         color: $greytext-color;
         box-shadow: inset 1px 3px 9px -6px;
+
         &__icon {
             padding-right: 15px;
             align-items: center;
         }
+
         &__position {
             border: none;
             background-color: $background-nav-color;
@@ -25,20 +27,25 @@ nav {
             font-weight: 600;
         }
     }
+
     .explore {
         background-color: $primary-background-color;
         text-align: center;
         padding: 30px 20px 50px 20px;
+
         &__title {
             margin: 0 0 10px 0;
         }
+
         &__subtiles {
             margin-bottom: 40px;
             color: #616161;
         }
+
         &__a {
             text-decoration: none;
         }
+
         &__btn {
             @include box-shadow;
             @include btn;
@@ -48,24 +55,30 @@ nav {
             }
         }
     }
+
     .choice {
         padding: 15px 5px 5px 5px;
         margin-right: 20px;
+
         &__title {
             padding-left: 20px;
         }
+
         &__counter {
             @include counter;
         }
+
         &__icon {
             margin-right: 15px;
             color: $grey-color;
         }
+
         &__steps {
             padding: 0px 20px 20px 50px;
             display: flex;
             flex-direction: column;
         }
+
         &__step {
             list-style-type: none;
             border-radius: 25px;
@@ -78,6 +91,7 @@ nav {
             font-weight: bold;
             background-color: $primary-background-color;
             @include box-shadow;
+
             &:hover {
                 background-color: #f0e9fa;
                 cursor: pointer;
@@ -85,6 +99,7 @@ nav {
                 box-shadow: 4px 4px 10px rgba(173, 173, 173, 40%)
             }
         }
+
         .choice__step:hover .choice__icon {
             color: $primary-color;
         }
@@ -97,6 +112,7 @@ nav {
     background-color: $primary-background-color;
     padding: 20px;
 }
+
 .meals {
     &__card {
         width: 100%;
@@ -106,38 +122,48 @@ nav {
         background-color: white;
         @include box-shadow;
         position: relative;
+
         &:hover {
             @include transform;
         }
+
         filter: brightness(100%);
+
         &:hover {
             filter: brightness(1.10);
         }
+
         @media (max-width: 991px) and (min-width: 768px) {
             display: flex;
             flex-direction: column;
+
             &__card {
                 margin: 20px;
             }
         }
     }
+
     &__img {
         width: 100%;
         height: 200px;
         object-fit: cover;
         border-radius: 25px 25px 0 0;
     }
+
     &__title {
         padding: 10px 0 5px 15px;
         margin: 0;
     }
+
     &__loc {
         margin: 0;
         padding-left: 15px;
     }
+
     &__new {
         @include new;
     }
+
     &__checkbox {
         position: absolute;
         right: 40px;
@@ -145,6 +171,7 @@ nav {
         cursor: pointer;
         font-size: 28px;
     }
+
     &__checkbox input {
         display: none;
     }
