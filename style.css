@@ -255,6 +255,27 @@ input[type=checkbox]:checked + span:before {
     opacity: 1;
   }
 }
+/* meals cards appear gradual */
+@keyframes appear {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: transalteY(0);
+    opacity: 1;
+  }
+}
+@keyframes check {
+  from {
+    transform: translateY(-1%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
 /* animation loading spinner */
 @keyframes loading {
   0% {
@@ -306,7 +327,7 @@ input[type=checkbox]:checked + span:before {
   width: 100%;
   z-index: 1;
   position: relative;
-  max-height: 30rem;
+  max-height: 25rem;
   object-fit: cover;
 }
 .list__choices {
@@ -322,6 +343,11 @@ input[type=checkbox]:checked + span:before {
   font-weight: 500;
   font-size: 30px;
 }
+@media (max-width: 991px) and (min-width: 768px) {
+  .list__title {
+    text-align: center;
+  }
+}
 .list__checkbox {
   position: absolute;
   right: 40px;
@@ -332,6 +358,11 @@ input[type=checkbox]:checked + span:before {
 .list__checkbox input {
   opacity: 0;
 }
+@media (max-width: 991px) and (min-width: 768px) {
+  .list__category {
+    margin-top: 50px;
+  }
+}
 .list__h3 {
   text-transform: uppercase;
   font-size: 16px;
@@ -340,6 +371,16 @@ input[type=checkbox]:checked + span:before {
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 5px;
   width: 40px;
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .list__h3 {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+  }
+  .list__h3__card {
+    margin: 15px;
+  }
 }
 .list__dishes {
   padding-top: 20px;
@@ -353,7 +394,9 @@ input[type=checkbox]:checked + span:before {
   box-shadow: 4px 4px 10px rgba(173, 173, 173, 0.25);
   margin-bottom: 10px;
   position: relative;
+  animation: appear 1s;
   animation-fill-mode: both;
+  animation: check reverse 1500ms ease-in-out;
 }
 .list__meals:nth-child(1) {
   animation-delay: 100ms;
@@ -382,6 +425,12 @@ input[type=checkbox]:checked + span:before {
 .list__meals input[type=checkbox]:checked + .list__check .list__icon {
   transform: rotate(359deg);
   transition: transform 900ms;
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .list__meals {
+    width: 70%;
+    margin: 10px auto;
+  }
 }
 .list__subtiles {
   display: flex;
@@ -471,6 +520,27 @@ input[type=checkbox]:checked + span:before {
     opacity: 1;
   }
 }
+/* meals cards appear gradual */
+@keyframes appear {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: transalteY(0);
+    opacity: 1;
+  }
+}
+@keyframes check {
+  from {
+    transform: translateY(-1%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
 /* animation loading spinner */
 @keyframes loading {
   0% {
@@ -542,6 +612,11 @@ input[type=checkbox]:checked + span:before {
 }
 .footer__icon {
   margin-right: 15px;
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .footer {
+    text-align: center;
+  }
 }
 
 .footer a {

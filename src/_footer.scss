@@ -51,6 +51,10 @@
     &__icon {
         margin-right: 15px;
     }
+
+    @media (max-width: 991px) and (min-width: 768px) {
+        text-align: center;
+    }
 }
 
 .footer a {

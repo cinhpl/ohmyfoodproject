@@ -33,7 +33,7 @@
         width: 100%;
         z-index: 1;
         position: relative;
-        max-height: 30rem;
+        max-height: 25rem;
         object-fit: cover;
     }
 
@@ -50,6 +50,10 @@
         font-family: "Shrikhand", sans-serif;
         font-weight: 500;
         font-size: 30px;
+
+        @media (max-width: 991px) and (min-width: 768px) {
+            text-align: center;
+        }
     }
 
     &__checkbox {
@@ -64,6 +68,12 @@
         opacity: 0;
     }
 
+    &__category {
+        @media (max-width: 991px) and (min-width: 768px) {
+            margin-top: 50px;
+        }
+    }
+
     /*   LISTS    */
     &__h3 {
         text-transform: uppercase;
@@ -73,6 +83,16 @@
         border-bottom: 3px solid $tertiary-color;
         padding-bottom: 5px;
         width: 40px;
+
+        @media (max-width: 991px) and (min-width: 768px) {
+            margin: auto;
+            width: 70%;
+            text-align: center;
+
+            &__card {
+                margin: 15px;
+            }
+        }
     }
 
     &__dishes {
@@ -95,8 +115,9 @@
         @include box-shadow;
         margin-bottom: 10px;
         position: relative;
-        animation-fill-mode: both;
         animation: appear 1s;
+        animation-fill-mode: both;
+        animation: check reverse 1500ms ease-in-out;
 
         &:hover {
             cursor: pointer;
@@ -116,6 +137,11 @@
                 transform: rotate(359deg);
                 transition: transform 900ms;
             }
+        }
+
+        @media (max-width: 991px) and (min-width: 768px) {
+            width: 70%;
+            margin: 10px auto;
         }
     }
 
