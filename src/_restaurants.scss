@@ -96,6 +96,7 @@
         margin-bottom: 10px;
         position: relative;
         animation-fill-mode: both;
+        animation: appear 1s;
 
         &:hover {
             cursor: pointer;
