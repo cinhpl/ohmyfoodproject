@@ -217,8 +217,7 @@ nav .choice .choice__step:hover .choice__icon {
 .meals__checkbox input {
   display: none;
 }
-
-input[type=checkbox] + span:before {
+.meals input[type=checkbox] + span:before {
   content: "\f004";
   display: inline-block;
   font-style: normal;
@@ -230,8 +229,7 @@ input[type=checkbox] + span:before {
   color: inherit;
   font-size: 28px;
 }
-
-input[type=checkbox]:checked + span:before {
+.meals input[type=checkbox]:checked + span:before {
   content: "\f004";
   font-family: fontAwesome;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
@@ -354,6 +352,27 @@ input[type=checkbox]:checked + span:before {
   top: 50px;
   cursor: pointer;
   font-size: 28px;
+}
+.list__checkbox input[type=checkbox] + span:before {
+  content: "\f004";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 500;
+  color: inherit;
+  font-size: 28px;
+}
+.list__checkbox input[type=checkbox]:checked + span:before {
+  content: "\f004";
+  font-family: fontAwesome;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heart 1s;
 }
 .list__checkbox input {
   opacity: 0;

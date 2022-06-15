@@ -44,6 +44,7 @@
         margin: -80px 0 0 0;
         z-index: 10;
         position: relative;
+
     }
 
     &__title {
@@ -62,6 +63,15 @@
         top: 50px;
         cursor: pointer;
         font-size: 28px;
+
+        input[type="checkbox"]+span:before {
+            @include heart-unchecked;
+        }
+
+        input[type="checkbox"]:checked+span:before {
+            @include heart-checked;
+            animation: heart 1s;
+        }
     }
 
     &__checkbox input {
@@ -201,4 +211,5 @@
     &__mealscheck {
         display: none;
     }
+
 }
